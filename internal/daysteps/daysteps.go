@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	stepLength = 0.65 // м
+	stepLength = 0.65
 	mInKm      = 1000.0
 )
 
@@ -59,7 +59,7 @@ func DayActionInfo(data string, weight, height float64) string {
 	}
 
 	return fmt.Sprintf(
-		"Количество шагов: %d.\nДистанция составила %.2f км.\nВы сожгли %.2f ккал.",
+		"Количество шагов: %d.\nДистанция составила %.2f км.\nВы сожгли %.2f ккал.\n",
 		steps,
 		distanceKm,
 		calories,
