@@ -35,6 +35,10 @@ func parsePackage(data string) (int, time.Duration, error) {
 		return 0, 0, fmt.Errorf("ошибка парсинга времени: %v", err)
 	}
 
+	if duration <= 0 {
+		return 0, 0, fmt.Errorf("продолжительность должна быть положительной")
+	}
+
 	return steps, duration, nil
 }
 
